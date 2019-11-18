@@ -28,11 +28,11 @@ public class TrainerController {
 
     @PostMapping("/")
     Trainer updateTrainer(@RequestBody Trainer trainer){
-        return trainerService.updateTrainer(trainer);
+        return trainerService.createTrainer(trainer);
     }
 
     @DeleteMapping("/{name}")
-    void deleteTraner(@PathVariable String name) {
+    void deleteTrainer(@PathVariable String name) {
         trainerService.deleteTrainer(name);
     }
 }

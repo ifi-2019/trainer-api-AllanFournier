@@ -31,13 +31,8 @@ public class TrainerServiceImpl implements TrainerService{
     }
 
     @Override
-    public Trainer updateTrainer(Trainer trainer) {
-        // TODO
-        return  trainerRepository.save(trainer);
-    }
-    @Override
     public void deleteTrainer(String name) {
         // TODO
-        trainerRepository.delete(trainerRepository.findById("name").orElse(null));
+        trainerRepository.deleteById(name);
     }
 }
